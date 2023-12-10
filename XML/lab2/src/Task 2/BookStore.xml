@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bookStore
+        xmlns="https://ahmedsameh_lab2_task2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://ahmedsameh_lab2_task2 BookStoreSchema.xsd"
+>
+    <book category="science" inStock="true">
+        <title>Clean code</title>
+        <author>craftsman</author>
+    </book>
+    <book category="fiction">
+        <title>spring starts here</title>
+        <author>ahmed sameh</author>
+    </book>
+    <book>
+        <title>OOP head first</title>
+        <author>nahah nshsah</author>
+    </book>
+</bookStore>

@@ -1,0 +1,6 @@
+1- /CATALOG/CD[PRICE>10.0]/TITLE
+2- /CATALOG/CD[YEAR<1990]
+3- /CATALOG/CD[COUNTRY="UK"]
+4- /CATALOG/CD[ARTIST="Dolly Parton"]/preceding-sibling::*/ARTIST
+5- /CATALOG/CD[TITLE="Private Dancer"]/following::CD/TITLE
+

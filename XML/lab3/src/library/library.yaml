@@ -1,0 +1,38 @@
+library:
+  desc: "This is the library of the institue"
+  location:
+    city: "cairo"
+    district: "smart village"
+  librarian:
+    id: "1530"
+    firstName: "Ahmed"
+    lastName: "Sameh"
+  books:
+    - book:
+        title: "clean code"
+        ISBN:
+          distribution: "global"
+          text: "12345Ahmd13"
+        author:
+          name: "Craftsman"
+        preface: "This book is for < boys & girls > 15 years"
+        sections:
+          chapter:
+            - title: "functions"
+              content: "hello world"
+            - title: "variables"
+              content: "hello world"
+    - book:
+        title: "OOP"
+        ISBN:
+          distribution: "global"
+          text: "12345Ahmd13"
+        author:
+          name: "AhmedSameh"
+        preface: "This book is for cracking interviews"
+        sections:
+          chapter:
+            - title: "inheritance"
+              content: "hello world"
+            - title: "polymorphism"
+              content: "hello world"

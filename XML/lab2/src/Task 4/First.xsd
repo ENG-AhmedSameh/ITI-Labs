@@ -1,0 +1,14 @@
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://ahmedsameh_lab2_task4_same"
+        xmlns="https://ahmedsameh_lab2_task4_same"
+        elementFormDefault="qualified"
+        attributeFormDefault="qualified">
+
+    <xs:complexType name="firstType">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

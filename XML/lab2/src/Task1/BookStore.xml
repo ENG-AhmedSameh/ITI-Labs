@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BookStore
+        xmlns="https://ahmedsameh_lab2_task1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://ahmedsameh_lab2_task1 BookStoreSchema.xsd"
+>
+    <Book>
+        <title>Clean code</title>
+        <author>craftsman</author>
+        <date>1999-10-15</date>
+        <ISBN>12345</ISBN>
+        <publisher>Dar misr</publisher>
+    </Book>
+    <Book>
+        <title>spring starts here</title>
+        <author>ahmed sameh</author>
+        <date>2025-01-01</date>
+        <ISBN>1510</ISBN>
+        <publisher>Dar misr</publisher>
+    </Book>
+</BookStore>

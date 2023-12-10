@@ -1,0 +1,21 @@
+<!ELEMENT library (location, librarian,books)>
+<!ELEMENT location (city, district)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT district (#PCDATA)>
+<!ELEMENT librarian (firstName,lastName)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT books (book+)>
+<!ELEMENT book (title,ISBN,author,preface,sections)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT author EMPTY>
+<!ELEMENT preface (#PCDATA)>
+<!ELEMENT sections (chapter+)>
+<!ELEMENT chapter (title,content)>
+
+<!ELEMENT content (#PCDATA)>
+
+<!ATTLIST library desc CDATA #REQUIRED>
+<!ATTLIST librarian id CDATA>
+<!ATTLIST author name CDATA>

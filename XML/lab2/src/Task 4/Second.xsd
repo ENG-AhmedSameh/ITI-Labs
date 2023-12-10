@@ -1,0 +1,13 @@
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://ahmedsameh_lab2_task4_different"
+        xmlns="https://ahmedsameh_lab2_task4_different"
+>
+    <xs:complexType name="secondType">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute name="testAtrr" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

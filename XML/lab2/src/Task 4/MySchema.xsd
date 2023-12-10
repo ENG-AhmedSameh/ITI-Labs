@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://ahmedsameh_lab2_task4_same"
+        xmlns="https://ahmedsameh_lab2_task4_same"
+        xmlns:s="https://ahmedsameh_lab2_task4_different"
+        elementFormDefault="qualified"
+        attributeFormDefault="qualified">
+    <xs:include schemaLocation="First.xsd"/>
+    <xs:import namespace="https://ahmedsameh_lab2_task4_different" schemaLocation="Second.xsd"/>
+    <xs:include schemaLocation="Third.xsd"/>
+    <xs:element name="testTypes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="eleFirst" type="firstType"/>
+                <xs:element name="eleSecond" type="s:secondType"/>
+                <xs:element name="eleThird" type="thirdType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE library SYSTEM "libraryDTD.dtd">
+<library desc = "This is the library of the institue">
+    <location>
+        <city>cairo</city>
+        <district>smart village</district>
+    </location>
+    <librarian id="AH_SA_1510">
+        <firstName>Ahmed</firstName>
+        <lastName>Sameh</lastName>
+    </librarian>
+
+    <books>
+        <book>
+            <title>clean code</title>
+            <ISBN>3256378743764</ISBN>
+            <author name ="AhmedSameh"/>
+            <preface>
+               <![CDATA["This book is for < boys & girls > 15 years]]>
+            </preface>
+
+            <sections>
+                <chapter>
+                    <title>functions</title>
+                    <content>hello world</content>
+                </chapter>
+                <chapter>
+                    <title>variables</title>
+                    <content>hello world</content>
+                </chapter>
+            </sections>
+        </book>
+
+    </books>
+</library>

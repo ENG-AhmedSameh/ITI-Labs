@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testTypes
+        xmlns="https://ahmedsameh_lab2_task4_same"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://ahmedsameh_lab2_task4_same MySchema.xsd"
+
+>
+    <eleFirst>
+        <firstName>Ahmed</firstName>
+        <lastName>Sameh</lastName>
+    </eleFirst>
+
+    <eleSecond testAtrr="test">1510</eleSecond>
+
+    <eleThird>999</eleThird>
+
+</testTypes>

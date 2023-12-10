@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://ahmedsameh_lab2_task3"
+        xmlns="https://ahmedsameh_lab2_task3"
+        elementFormDefault="qualified">
+
+    <xs:element name="weekDay">
+        <xs:simpleType>
+            <xs:union memberTypes="daysByNum daysByName"/>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="daysByNum">
+        <xs:restriction base="xs:int">
+            <xs:pattern value="[1-7]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="daysByName">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Saturday"/>
+            <xs:enumeration value="Sunday"/>
+            <xs:enumeration value="Monday"/>
+            <xs:enumeration value="Tuesday"/>
+            <xs:enumeration value="Wednesday"/>
+            <xs:enumeration value="thursday"/>
+            <xs:enumeration value="friday"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

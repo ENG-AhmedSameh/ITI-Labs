@@ -1,0 +1,114 @@
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://ahmedsameh_lab2_task5"
+        xmlns="https://ahmedsameh_lab2_task5"
+        elementFormDefault="qualified">
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation >
+                    this chapter is Ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+                </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+
+                <xs:element name="location">
+                    <xs:complexType>
+                        <xs:group ref="locationGroup"/>
+                    </xs:complexType>
+                </xs:element>
+
+
+                <xs:element name="librarian">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="personInfo">
+                                <xs:attribute name="id">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:int">
+                                            <xs:minExclusive value="1000"/>
+                                            <xs:maxExclusive value="2000"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:complexContent>
+
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="books">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="book" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element ref="title"/>
+
+                                        <xs:element name="ISBN">
+                                            <xs:complexType>
+
+                                                <xs:simpleContent>
+<!--                                                    <xs:restriction base="xs:string">-->
+<!--                                                        <xs:length value="13"/>-->
+<!--                                                    </xs:restriction>-->
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="distribution" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="author">
+                                            <xs:complexType>
+                                                <xs:attribute name="name"/>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name = "preface" type="xs:string"/>
+                                        <xs:element name="sections">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name = "chapter" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element ref="title"/>
+                                                                <xs:element name="content" type="xs:string"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="desc" type="xs:string"/>
+
+        </xs:complexType>
+    </xs:element>
+
+    <xs:group name="locationGroup">
+        <xs:sequence>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="district" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="personInfo">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="title" type="xs:string"/>
+
+</xs:schema>

@@ -1,0 +1,5 @@
+char class[]
+capture group vs non capture
+escaping inside regex
+exception vs runtime exception
+single file source code

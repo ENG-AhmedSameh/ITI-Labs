@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="modsJars">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/modsJars/ContactsModule.jar!/" />
+      <root url="jar://$PROJECT_DIR$/modsJars/addressbookModule.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

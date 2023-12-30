@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="D07L01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ContactsModule.jar!/" />
+      <root url="jar://$PROJECT_DIR$/addressbookModule.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

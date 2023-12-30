@@ -1,0 +1,2 @@
+jar cfm demo.jar manifest.txt .
+java -jar demo.jar

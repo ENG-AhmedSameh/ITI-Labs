@@ -1,0 +1,3 @@
+Main-Class: iti.jets.java.Main
+CLASS-PATH: ..\lib\ojdbc11.jar
+

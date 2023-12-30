@@ -1,0 +1,3 @@
+javac -d target -cp .;lib/ojdbc11.jar src/iti/jets/java/Main.java
+
+java -cp .;lib/ojdbc11.jar;target iti.jets.java.Main

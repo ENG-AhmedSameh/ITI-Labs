@@ -1,0 +1,3 @@
+module addressbookModule {
+    requires ContactsModule;
+}

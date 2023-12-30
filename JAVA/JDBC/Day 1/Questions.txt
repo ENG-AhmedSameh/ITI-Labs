@@ -1,0 +1,2 @@
+maven SNAPSHOT version keyword:
+https://www.baeldung.com/maven-snapshot-release-repository

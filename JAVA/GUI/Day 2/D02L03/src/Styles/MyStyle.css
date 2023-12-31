@@ -1,0 +1,8 @@
+.root{
+    -fx-background-color: linear-gradient(to bottom,black,#454545,white,#454545,black);
+}
+#helloText{
+    -fx-fill: red;
+    -fx-font-size: 40;
+    -fx-font-weight: bold;
+}

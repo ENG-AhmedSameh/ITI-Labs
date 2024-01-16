@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="509.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gov.iti.jets.java.d01l01.Controllers.ChatPaneController">
+   <children>
+      <BorderPane style="-fx-background-color: #0e1621;" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ScrollPane fx:id="messagesScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="messagesVBox" prefHeight="317.0" prefWidth="660.0" spacing="10.0" style="-fx-background-color: #17212b;" />
+               </content>
+            </ScrollPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="546.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imageProfilePictureImageView" fitHeight="80.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profileIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="fullNameTextField" prefHeight="18.0" prefWidth="184.0" text="Label" textFill="WHITE" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="messageTextField" blendMode="SCREEN" prefHeight="26.0" prefWidth="502.0" style="-fx-background-color: #0e1621; -fx-text-fill: #FFFFFF;" HBox.hgrow="ALWAYS">
+<!--                     <onAction>#onMessageSentHandler</onAction>-->
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="sendButton" defaultButton="true" mnemonicParsing="false" onAction="#sendMessageHandler" style="-fx-background-color: #2f6ea5;" text="Send">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

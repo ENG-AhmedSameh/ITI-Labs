@@ -1,0 +1,125 @@
+<project 
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0  http://maven.apache.org/maven-v4_0_0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>gov.iti.jets</groupId>     <!-- msh lazm ykon nfs el package structure -->
+   <artifactId>hello-world</artifactId>
+   <packaging>jar</packaging>
+   <version>1.0-SNAPSHOT</version>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <developer.name>Ahmed Sameh</developer.name>
+   </properties>
+
+
+   <developers>
+      <developer>
+          <id>1</id>
+          <name>${developer.name}</name>
+          <email>AhmedSameh@gmail.com</email>
+      </developer>
+   </developers>
+
+   <organization>
+      <name>jets</name>
+      <url>adlkanjasdnas.com</url>
+   </organization>
+
+   <inceptionYear>2023</inceptionYear>  <!-- year that the project is done-->
+
+  
+
+
+   <build>
+      <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.12.0</version>
+            <configuration>
+                  <release>17</release>
+            </configuration>
+        </plugin>
+
+
+        <!-- <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-clean-plugin</artifactId>
+         <version>3.3.2</version>
+         <executions>
+            <execution>
+               <id>auto clean</id>
+               <phase>pre-clean</phase>
+               <goals>
+                  <goal>clean</goal>
+               </goals>
+               <configuration>
+                  <mainClass>gov.iti.jets.App</mainClass>
+               </configuration>
+            </execution>
+         </executions>
+        </plugin> -->
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.1.1</version>
+          <!-- <executions>
+            <execution>
+               <id>auto run</id>
+               <phase>package</phase>
+               <goals>
+                  <goal>java</goal>
+               </goals>
+               <configuration>
+                  <executable>notepad</executable>
+                  <mainClass>gov.iti.jets.App</mainClass>
+               </configuration>   
+            </execution>
+          </executions> -->
+        </plugin>
+
+        <plugin>
+         <artifactId>maven-jar-plugin</artifactId>
+         <version>3.3.0</version>
+         <configuration>
+            <archive>
+               <manifest>
+                  <addClasspath>true</addClasspath>
+                  <mainClass>gov.iti.jets.App</mainClass>
+               </manifest>
+            </archive>
+         </configuration>
+        </plugin>
+
+      </plugins>
+   </build>
+
+   <dependencies>
+
+      <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>6.4.1.Final</version>
+         <type>pom</type>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.13.2</version>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.hamcrest</groupId>
+               <artifactId>hamcrest</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+   </dependencies>
+</project>

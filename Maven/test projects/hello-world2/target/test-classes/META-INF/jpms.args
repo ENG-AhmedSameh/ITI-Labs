@@ -1,0 +1,4 @@
+--patch-module
+hamada=_
+--add-reads
+hamada=ALL-UNNAMED

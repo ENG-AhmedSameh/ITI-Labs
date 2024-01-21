@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="border-pane" stylesheets="@../styles/General.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iti.java.d02l01.controllers.folderStructurePaneController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="File Browsing" textFill="WHITE" />
+            <TextField fx:id="folderPathTextField" editable="false" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="folderChooserButton" mnemonicParsing="false" onMouseClicked="#onFolderChooserClicked" prefHeight="33.0" prefWidth="49.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" onMouseClicked="#onFolderChooserClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/folder-chooser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="treeViewAnchorPane" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <TreeView fx:id="folderBrowsingTreeView" layoutY="-4.0" prefHeight="306.0" prefWidth="304.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="listViewAnchorPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <children>
+                  <ListView fx:id="folderContentListView" layoutX="1.0" layoutY="-2.0" prefHeight="302.0" prefWidth="298.0" stylesheets="@../styles/General.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

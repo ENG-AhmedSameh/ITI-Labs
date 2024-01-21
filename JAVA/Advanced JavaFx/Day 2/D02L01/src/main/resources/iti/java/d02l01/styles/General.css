@@ -1,0 +1,22 @@
+.border-pane{
+    -fx-background-color: #0e1621;
+}
+.list-view{
+    -fx-background-color: #17212b;
+}
+.list-view .list-cell:odd {
+    -fx-background-color: #0e1621;
+    -fx-text-fill: white;
+}
+.list-view .list-cell:even {
+    -fx-background-color: #17212b;
+    -fx-text-fill: white;
+}
+
+.tree-view{
+    -fx-background-color: #2f6ea5;
+}
+.tree-view .tree-cell {
+    -fx-background-color: #2f6ea5;
+    -fx-text-fill: white;
+}
